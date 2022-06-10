@@ -1,0 +1,64 @@
+{
+    "people":[
+        {
+            "03954": {
+                "name": "yoni",
+                "surname": "shemesh",
+                "age": 2,
+                "family_member": "kid"
+            },
+            "01245": {
+                "name": "shani",
+                "surname": "shemesh",
+                "age": 5,
+                "family_member": "kid"
+            },
+            "02221": {
+                "name": "yuval",
+                "surname": "yakir",
+                "age": 45,
+                "family_member": "parent"
+            },
+            "45631": {
+                "name": "peter",
+                "surname": "shemesh",
+                "age": 37,
+                "family_member": "parent"
+            },
+            "85631": {
+                "name": "sima",
+                "surname": "shemesh",
+                "age": 35,
+                "family_member": "parent"
+            },
+            "21341": {
+                "name": "lior",
+                "surname": "yakir",
+                "age": 46,
+                "family_member": "parent"
+            }
+        }
+    ],
+    "families":[
+        {
+            "999-8234": {
+                "surname": "shemesh",
+                "has_kids": true,
+                "parents": ["peter", "sima"],
+                "kids": ["yoni", "shani"],
+                "kids_num": 2
+            }
+        },
+        {
+            "999-8232": {
+                "surname": "yakir",
+                "has_kids": false,
+                "parents": ["lior", "yuval"],
+                "kids": null,
+                "kids_num": 0
+            }
+        }
+        
+    ]
+
+}
