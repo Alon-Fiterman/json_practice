@@ -4,6 +4,7 @@ json_file = open('Task.json').read()
 data = json.loads(json_file)
 
 def clean_data():
+    id_list = []
     name_list = []
     age_list = []
     member_list = []
@@ -27,6 +28,7 @@ def clean_data():
             people_surname_list.append(surnames)
     for family in data['families']:
         for info in family:
+            id_list.append(info)
             for details in family[info]:
                 surnames = family[info]['surname']
                 has_kids = family[info]['has_kids']
@@ -43,6 +45,16 @@ def clean_data():
             parents_list.append(x)
     for kid in temp_kids_list[0]:
         kids_list.append(kid)
+
+    # This checks if the first 3 digits in the id field of families is indeed 999
+    id_status = False
+    for id in id_list:
+        if '999' in id:
+            id_status = True
+            print("The number 999 is the beginning of the id in this list")
+        else:
+            print("The number 999 is not part of the id related to the families list\n")
+    print()
 
     # This check wheter the names have a numerical correspondent as the surnames
     if len(name_list) == len(people_surname_list):
